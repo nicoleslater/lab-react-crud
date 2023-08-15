@@ -12,7 +12,8 @@ export function destroyShow(id) {
 
 // Index/Get all
 export function getAllShows() {
-  return fetch(`${URL}/movies`).then(res => res.json());
+  return;
+  //  fetch(`${URL}/movies`).then(res => res.json());
 }
 
 // Show/Get one
@@ -28,5 +29,9 @@ export function updateShow(id, show) {
 // Movies
 
 export function getAllMovies() {
-  return;
+  return fetch(`${URL}/movies`).then(res => res.json());
+}
+
+export function getOneMovie() {
+  return fetch(`${URL}/movies/${id}`).then(res => res.json());
 }
