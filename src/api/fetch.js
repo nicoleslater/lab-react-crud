@@ -12,7 +12,7 @@ export function destroyShow(id) {
 
 // Index/Get all
 export function getAllShows() {
-  return;
+  return fetch(`${URL}/movies`).then(res => res.json());
 }
 
 // Show/Get one
