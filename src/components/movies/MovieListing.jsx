@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
-function MovieList({ movie }) {
+function MovieListing({ movie }) {
+
     return (
         <article className="movie">
             <h3 className="title">
@@ -20,4 +21,4 @@ function MovieList({ movie }) {
     );
 }
 
-export default MovieList;
+export default MovieListing;
