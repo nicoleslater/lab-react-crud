@@ -1,5 +1,7 @@
-import React from 'react';
+
 import "../shows/ShowsForm.css"
+import { useState } from 'react';
+
 
 const MovieNewForm = () => {
     const [movie, setMovie] = useState({
@@ -13,21 +15,8 @@ const MovieNewForm = () => {
         rating: "",
         releaseYear: "",
     })
+function handleSubmit(event){}
 
-    const navigate = useNavigate();
-    
-    function handleSubmit(e){
-        e.preventDefault();
-        createMovie(movie)
-        .then((createMovie) => {
-            console.log(createMovie)
-            alert(`movie created: ${createdMovie.title} id : ${createdMovie.id}`)
-            navigate(`/movies/${createdMovie.id}`)
-        })
-        .catch((err) => {
-            console.error(err)
-        })
-    }
 
     function handleTextChange(e){
         setMovie({

@@ -1,30 +1,13 @@
-import { getAllMovies } from "../../api/fetch";
+
 import "../shows/ShowsIndex.css"
 import { Link } from "react-router-dom";
 import ErrorMessage from "../errors/ErrorMessage";
 
 export default function MoviesIndex() {
-  const [loadingError, setLoadingError] = useState(true);
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    // we need to get data 
-    getAllMovies()
-      .then((movieJson) => {
-        setShows(movieJsonJson)
-        setLoadingError(false)
-      })
-      .catch((err)=> {
-        setLoadingError(true);
-        console.error(err)
-      })
-    // and save it to our shows  state
-    // dependency array tells us what to follow to fire our useEffect
-  },[])
   
-  return (
+return (
     <div>
-  { loadingError ? (
+  { false ? (
     <ErrorMessage />
   ) : (
     <section className="movies-index-wrapper">
@@ -37,9 +20,9 @@ export default function MoviesIndex() {
         Search Movies:
         <input
           type="text"
-          // value={searchTitle}
+          value={searchTitle}
           id="searchTitle"
-          // onChange={handleTextChange}
+          onChange={handleTextChange}
         />
       </label>
       <section className="movies-index">
