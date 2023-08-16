@@ -1,6 +1,7 @@
 import React from 'react';
 import {useParams, useNavigate} from "react-router-dom";
 import { getOneMovie, updateMovie } from '../../api/fetch';
+import "../shows/ShowsForm.css"
 
 export default function MoviesForm(){
     const {id} = useParams();

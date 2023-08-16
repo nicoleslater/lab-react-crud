@@ -1,4 +1,5 @@
 import React from 'react';
+import "../shows/ShowsForm.css"
 
 const MovieNewForm = () => {
     const [movie, setMovie] = useState({

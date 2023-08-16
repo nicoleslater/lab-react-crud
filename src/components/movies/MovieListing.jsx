@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../shows/ShowListing.css"
 
 function MovieListing({ movie }) {
 

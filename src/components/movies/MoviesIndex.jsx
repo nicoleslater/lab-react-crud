@@ -1,4 +1,5 @@
 import { getAllMovies } from "../../api/fetch";
+import "../shows/ShowsIndex.css"
 
 export default function MoviesIndex() {
   const [loadingError, setLoadingError] = useState(true);
