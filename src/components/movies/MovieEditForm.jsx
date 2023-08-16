@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams, useNavigate} from "react-router-dom";
-import { getOneMovie } from '../../api/fetch';
+import { getOneMovie, updateMovie } from '../../api/fetch';
 
 export default function MoviesForm(){
     const {id} = useParams();
