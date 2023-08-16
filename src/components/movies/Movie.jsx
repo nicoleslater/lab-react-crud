@@ -4,7 +4,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 // import "./Show.css";
 
 import ErrorMessage from "../errors/ErrorMessage";
-import { getOneMovie, deleteMovie } from "../../api/fetch";
+import { getOneMovie, destroyMovie } from "../../api/fetch";
 
 function Movie() { 
   // state to hold Show initialized to an empty object - data of a show
@@ -35,7 +35,7 @@ function Movie() {
   },[id])
 
   function handleDelete(id) {
-    deleteMovie(id)
+    destroyMovie(id)
       .then(() => {
         alert("movie destroyed - rerouting to index");
         navigate("/movies")
