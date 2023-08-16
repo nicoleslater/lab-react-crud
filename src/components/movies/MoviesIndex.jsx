@@ -1,13 +1,28 @@
-
+import {useState, useEffect}  from "react";
 import "../shows/ShowsIndex.css"
 import { Link } from "react-router-dom";
 import ErrorMessage from "../errors/ErrorMessage";
+import { getAllMovies } from "../../api/fetch";
+import MovieListing from "../movies/MovieListing";
 
 export default function MoviesIndex() {
-  
+  const [loadingError, setLoadingError] = useState(false)
+  const [movie, setMovie] = useState([]);
+
+  useEffect(() =>  {
+    getAllMovies()
+    .then((movieJson) => {
+      setMovie(movieJson)
+      setLoadingError(false)
+    })
+    .catch((err) => {
+      setLoadingError(true);
+      console.error(err)
+    })
+  }, [])
 return (
     <div>
-  { false ? (
+  { loadingError ? (
     <ErrorMessage />
   ) : (
     <section className="movies-index-wrapper">
