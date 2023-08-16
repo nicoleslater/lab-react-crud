@@ -7,6 +7,8 @@ import ErrorMessage from "../errors/ErrorMessage";
 import { getOneMovie, destroyMovie } from "../../api/fetch";
 
 function Movie() { 
+
+    // console.log(movieData)
   // state to hold Show initialized to an empty object - data of a show
   const [movie, setMovie] = useState({});
   //state to hold error state - intialized to a false
