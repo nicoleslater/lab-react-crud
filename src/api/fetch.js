@@ -54,3 +54,23 @@ export function deleteMovie(id){
   const options = { method: "DELETE" }
   return fetch(`${URL}/movies/${id}`, options)
 }
+
+
+export function updateMovie(id, movie) {
+  const options = {
+    method:"PUT",
+    body: JSON.stringify(movie),
+    headers: {"Content-Type": "application/json"}
+  }
+  return;
+}
+
+export function createMovie(movie) {
+  const options = {
+    method: "POST",
+    body: JSON.stringify(movie),
+    headers: {"Content-Type": "application/json"}
+
+  }
+  return;
+}
