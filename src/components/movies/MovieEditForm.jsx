@@ -4,10 +4,7 @@ import { getOneMovie, updateMovie } from '../../api/fetch';
 import "../shows/ShowsForm.css"
 
 export default function MoviesForm(){
-    const {id} = useParams();
-    const navigate = useNavigate();
-
-    const [movie, setMovies] = useState({
+ const [movie, setMovie] = useState({
         type: "",
         title: "",
         country: "",
@@ -18,6 +15,8 @@ export default function MoviesForm(){
         rating: "",
         releaseYear: "",
     })
+    const {id} = useParams();
+    const navigate = useNavigate();
 
     useEffect(()=> {
         getOneMovie(id)
@@ -33,9 +32,9 @@ export default function MoviesForm(){
 
     function handleSubmit(e){
         e.preventDefault();
-        console.log(movie)
-        .then((createMovie) => {
-        alert(`movie created:${createMovie.title} ${createMovie.id}`)
+        updateMovie(id, movie)
+        .then((res) => {
+        navigate(`/movies/${id}`)
         })
         .catch((error) => {
             console.log(error)
@@ -44,7 +43,7 @@ export default function MoviesForm(){
     }
 
     function handleTextChange(event){
-        setMovies({
+        setMovie({
             ...movie, 
             [event.target.id]: event.target.value,
         });
