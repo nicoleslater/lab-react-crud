@@ -53,7 +53,7 @@ export function updateShow(id, show) {
 // create
 export function createMovie(movie) {
   const options = {
-    method: "Post",
+    method: "POST",
     body: JSON.stringify(movie),
   headers: {"Content-Type": "application/json"} 
 }
