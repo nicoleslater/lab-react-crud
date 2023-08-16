@@ -35,9 +35,9 @@ return (
         Search Movies:
         <input
           type="text"
-          value={searchTitle}
+          // value={searchTitle}
           id="searchTitle"
-          onChange={handleTextChange}
+          // onChange={handleTextChange}
         />
       </label>
       <section className="movies-index">
