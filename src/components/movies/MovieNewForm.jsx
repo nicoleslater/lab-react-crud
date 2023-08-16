@@ -1,7 +1,8 @@
 
 import "../shows/ShowsForm.css"
 import { useState } from 'react';
-
+import {useNavigate} from "react-router-dom";
+import {createMovie} from "../../api/fetch";
 
 const MovieNewForm = () => {
     const [movie, setMovie] = useState({
@@ -14,8 +15,21 @@ const MovieNewForm = () => {
         listedIn: "",
         rating: "",
         releaseYear: "",
+    });
+const navigate = useNavigate();
+
+function handleSubmit(event){
+    event.preventDefault();
+    createMovie(movie)
+    .then((createdMovie) => {
+        console.log(createdMovie)
+        alert(`movie created: ${createdMovie.title} id: ${createdMovie.id}`)
+        navigate(`/movies/${createdMovie.id}`)
     })
-function handleSubmit(event){}
+    .catch((err) => {
+        console.log(err)
+    })
+}
 
 
     function handleTextChange(e){
