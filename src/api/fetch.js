@@ -49,3 +49,8 @@ export function getAllMovies() {
 export function getOneMovie(id) {
   return fetch(`${URL}/movies/${id}`).then(res => res.json());
 }
+
+export function deleteMovie(id){
+  const options = { method: "DELETE" }
+  return fetch(`${URL}/movies/${id}`, options)
+}

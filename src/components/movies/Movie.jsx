@@ -35,7 +35,7 @@ function Movie() {
   },[id])
 
   function handleDelete(id) {
-    destroyShow(id)
+    deleteMovie(id)
       .then(() => {
         alert("movie destroyed - rerouting to index");
         navigate("/movies")
