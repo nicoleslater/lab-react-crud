@@ -1,5 +1,5 @@
 
-import "../shows/ShowsForm.css"
+import "src/components/movies/MovieForm.css";
 import { useState } from 'react';
 import {useNavigate} from "react-router-dom";
 import {createMovie} from "../../api/fetch";
