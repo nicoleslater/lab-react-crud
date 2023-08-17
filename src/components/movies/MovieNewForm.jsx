@@ -49,7 +49,7 @@ function handleSubmit(event){
                 onChange={handleTextChange}
                  />
            
-            <label htmlfor="description"> Description:  </label>
+            <label htmlFor="description"> Description:  </label>
                 <input 
                 type="text"
                 id="descritpion"
@@ -65,7 +65,7 @@ function handleSubmit(event){
                 onChange={handleTextChange}
                 />
            
-            <label htmlfor="rating" > Rating:  </label>
+            <label htmlFor="rating" > Rating:  </label>
                 <input
                 type="text"
                 id="rating"

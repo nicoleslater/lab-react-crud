@@ -49,7 +49,7 @@ export function updateShow(id, show) {
 
 // Movies
 
-  const url=import.meta.env.VITE_BASE_API_URL;
+  
 // create
 export function createMovie(movie) {
   const options = {
