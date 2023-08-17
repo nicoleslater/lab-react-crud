@@ -52,7 +52,7 @@ function handleSubmit(event){
             <label htmlFor="description"> Description:  </label>
                 <input 
                 type="text"
-                id="descritpion"
+                id="description"
                 value={movie.description}
                 onChange={handleTextChange}
                 />
