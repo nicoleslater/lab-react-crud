@@ -27,17 +27,11 @@ function App() {
           <Route path="/shows/new" element={<ShowsNewForm />} />
           <Route path="/shows/:id" element={<Show />} />
           <Route path="/shows/:id/edit" element={<ShowsEditForm />} />
-        </Routes>
-        <Footer />
-      </Router>
-      {/* May need possible Div seperation */}
-      <Router>
-        <Routes>
-          {/* May need possible Home Path with Routes */}
-          <Route path="/movies" element={<MoviesIndex />} />
-          <Route path="/movies/new" element={<MoviesNewForm />} />
-          <Route path="/movies/:id" element={<Movie />} />
-          <Route path="/movies/:id/edit" element={<MoviesEditForm />} />
+        <Route path="/movie" element={<MoviesIndex />} />
+          <Route path="/movie/new" element={<MoviesNewForm />} />
+          <Route path="/movie/:id" element={<Movie />} />
+          <Route path="/movie/:id/edit" element={<MoviesEditForm />} />
+          <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
       </Router>
     </div>
