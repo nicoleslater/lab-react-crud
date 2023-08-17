@@ -1,5 +1,5 @@
 import React from 'react';
-import {useParams, useNavigate} from "react-router-dom";
+import {useParams, useNavigate, useState} from "react-router-dom";
 import { getOneMovie, updateMovie } from '../../api/fetch';
 import "../shows/ShowsForm.css"
 
@@ -15,13 +15,14 @@ export default function MoviesForm(){
         rating: "",
         releaseYear: "",
     })
+
     const {id} = useParams();
     const navigate = useNavigate();
 
     useEffect(()=> {
         getOneMovie(id)
         .then((movieData) => {
-        setMovies(movieData)
+        setMovie(movieData)
         })
         .catch((err) => {
             console.log(err)
